@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    background-color: gainsboro;
+}
+
+header {
+    background-color: darkslategrey;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header:hover {
+    background-color: #3b5b67;
+}
+
+nav {
+    display: flex;
+    align-items: flex-end;
+}
+
+nav ol {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #1b1b1b;
+    color: white;
+    margin-top: 20px;
+    font-family: 'Big-shoulders', Courier, monospace;
+}
+figcaption {
+    color: indigo;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+img:hover {
+    box-shadow: 0 0 50px #1b1b1b;
+}

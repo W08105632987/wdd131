@@ -1,0 +1,114 @@
+@media (min-width: 971px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+        #menu-toggle {
+            display: none;
+        }
+}
+
+@media (min-width: 601px) and (max-width: 970px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr)  !important;
+        padding: 15px !important; 
+    }
+        nav ol {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background: #1b1b1b;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        nav ol.show {
+            display: flex;
+        }
+    
+        #menu-toggle {
+            display: block;
+        }
+    
+        #menu {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            background-color: darkslategrey;
+            padding: 10px;
+        }
+        
+        #menu.active {
+            display: flex;
+        }
+    
+        #menu-toggle {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            bottom: 0;
+        }
+    
+        #menu-toggle {
+            display: block;
+        }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr !important;
+        padding: 15px !important;
+    }
+
+    nav ol {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #1b1b1b;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav ol.show {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+     #menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: darkslategrey;
+         padding: 10px;
+        }
+    #menu.active {
+        display: flex;
+        }
+        #menu-toggle {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            bottom: 0;
+        }
+                #menu-toggle {
+                    display: block;
+                }
+       
+}
