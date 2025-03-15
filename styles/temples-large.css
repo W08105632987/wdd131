@@ -91,3 +91,7 @@ figcaption {
 img:hover {
     box-shadow: 0 0 50px #1b1b1b;
 }
+main h2 {
+    color: #1b1b1b;
+    font-style: italic;
+}
