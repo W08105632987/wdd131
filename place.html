@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD131 - A page that contains my favourite place">
+    <meta name="author" content="Okechukwu Wisdom Chidera">
+    <title>Home | Country Page</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Canada</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/squirrel_small.webp"
+                srcset="images/squirrel_small.webp 480w, images/squirrel_medium.webp 768w, images/squirrel_small.webp 1200w"
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 1200px" alt="Hero Image">
+        </section>
+
+        <section class="data">
+            <h2>Country Details</h2>
+            <ul>
+                <li><strong>Area:</strong> <span id="area">9,984,670 km²</span></li>
+                <li><strong>Population:</strong> <span id="population">38 million</span></li>
+                <li><strong>Capital:</strong> <span id="capital">Ottawa</span></li>
+                <li><strong>Languages:</strong> <span id="languages">English, French</span></li>
+                <li><strong>Currency:</strong> <span id="currency">Canadian Dollar (CAD)</span></li>
+                <li><strong>Timezone:</strong> <span id="timezone">UTC -3.5 to UTC -8</span></li>
+                <li><strong>Calling Code:</strong> <span id="calling-code">+1</span></li>
+                <li><strong>Internet TLD:</strong> <span id="tld">.ca</span></li>
+            </ul>
+        </section>
+        <section class="weather">
+            <h3>Weather <span class="weather-icon">⛅</span></h3>
+            <p>Temperature: <span id="temp">---</span> °C</p>
+            <p>Wind Speed: <span id="wind">---</span> km/h</p>
+            <p>Wind Chill: <span id="windchill">N/A</span></p>
+        </section>
+    </main>
+    <footer>
+        <p> 😎Okechukwu Wisdom Chidera😎 Canada</p>
+        <p><span id="year"></span> | <span id="lastModified"></span></p>
+    </footer>
+</body> 
+</html>
