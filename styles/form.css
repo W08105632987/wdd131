@@ -84,10 +84,12 @@ footer {
     position: relative;
     bottom: 0;
     margin: -20px -20px -20px -20px;
-    
-    
-
 }
 small {
     color: blue;
+}
+body h2 {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
