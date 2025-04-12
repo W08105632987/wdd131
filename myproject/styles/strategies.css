@@ -1,0 +1,437 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Playwrite IT Moderna', sans-serif;
+background-color: #f0f0f0;
+color: #333;
+overflow-x: hidden;
+}
+
+body,html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.strategies-page {
+text-align: center;
+padding: 30px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+h1 {
+font-family: 'Big Shoulders Stencil', sans-serif;
+font-size: 3rem;
+color: #333;
+margin-bottom: 20px;
+transform: perspective(500px) rotateX(10deg);
+animation: fadeIn 2s ease-out;
+}
+
+h2 {
+font-size: 2rem;
+color: #444;
+margin: 20px 0;
+transition: all 0.3s ease;
+}
+
+.intro-text {
+font-size: 1.2rem;
+color: #666;
+margin-bottom: 30px;
+animation: fadeInUp 2s ease-out;
+}
+
+.step {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin: 20px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+border-left: 5px solid #ff7f00;
+}
+
+.step:hover {
+transform: scale(1.03);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.step img {
+width: 100%;
+max-width: 600px;
+margin-top: 15px;
+border-radius: 8px;
+}
+
+.bonus ul {
+list-style: none;
+padding: 0;
+}
+
+.bonus li {
+margin: 10px 0;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 2rem;
+    text-align: center;
+    /* Space from footer content */
+    margin-left: 45%;
+}
+
+/* Home Button Styling */
+.cta a {
+    display: inline-block;
+    background-color: darkslategray;
+    /* Blue background */
+    color: white;
+    /* White text */
+    padding: 1rem 2rem;
+    /* Padding around the text */
+    font-size: 1.2rem;
+    /* Slightly larger text */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 50px;
+    /* Rounded corners */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.cta a:hover {
+    background-color: #2e2e2e;
+    /* Darker blue when hovered */
+    transform: translateY(-3px);
+    /* Slight lift effect on hover */
+}
+
+.cta a:focus {
+    outline: none;
+    /* Remove outline on focus */
+}
+
+.cta a:active {
+    transform: translateY(0);
+    /* Reset position when button is pressed */
+}
+
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 30px 0;
+}
+
+.scrolling-text {
+    font-size: 1.5rem;
+    color: black;
+    white-space: nowrap;
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: scrollText 25s linear infinite;
+}
+
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+0% { opacity: 0; transform: translateY(30px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ========== FORM CONTAINER ========== */
+strong {
+    color: blue
+}
+
+.form-section {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease-in-out;
+    transform-style: preserve-3d;
+    border-top: 5px solid #ff7f00;
+}
+
+/* ========== FORM HEADER ========== */
+.form-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2e2e2e;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.form-section p {
+    text-align: center;
+    color: #2e2e2e;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* ========== INPUT GROUPS ========== */
+.toolkit-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+
+.toolkit-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2e2e2e;
+}
+
+/* ========== INPUT & SELECT FIELDS ========== */
+.input-field {
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #2e2e2e;
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.2),
+        inset -8px -8px 15px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.input-field::placeholder {
+    color: gray;
+}
+
+.input-field:focus {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.toolkit-form {
+    border-left: 1px orangered;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    /* Starts hidden */
+    z-index: 1000;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s ease;
+}
+
+/* ========== CHECKBOX & RADIO ========== */
+fieldset {
+    border: none;
+    color: #2e2e2e;
+    margin-bottom: 1rem;
+}
+
+fieldset legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+fieldset label {
+    font-size: 14px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 0.5rem;
+    accent-color: #00ffff;
+}
+
+/* ========== TEXTAREA ========== */
+textarea.input-field {
+    resize: none;
+    min-height: 100px;
+}
+
+/* ========== SUBMIT BUTTON ========== */
+.submit-btn {
+    padding: 0.9rem 2rem;
+    background: #ff7f00;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    background-color: orangered;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* ========== ANIMATION ON LOAD ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toolkit-form {
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .strategies-page {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .step img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .cta {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .scrolling-text {
+        font-size: 1.2rem;
+    }
+
+        .form-section {
+            padding: 2rem 1rem;
+            margin: 1rem;
+            width: calc(100% - 2rem);
+        }
+    
+        .form-section h2 {
+            font-size: 1.8rem;
+        }
+    
+        .submit-btn {
+            width: 100%;
+            font-size: 1rem;
+        }
+}
+
+@media (max-width: 480px) {
+    .form-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .toolkit-form label,
+    .toolkit-form input,
+    .toolkit-form textarea {
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
+
+    .scrolling-text {
+        font-size: 1rem;
+    }
+
+        .form-section {
+            padding: 1.5rem 1rem;
+            margin: 1rem auto;
+            width: 95%;
+        }
+    
+        .form-section h2 {
+            font-size: 1.5rem;
+        }
+    
+        .input-field,
+        textarea.input-field {
+            font-size: 0.95rem;
+        }
+    
+        .submit-btn {
+            font-size: 0.95rem;
+        }
+}
+
+@media (min-width: 1024px) {
+    .strategies-page {
+        padding: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .form-section {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .step img {
+        max-width: 100%;
+        height: auto;
+    }
+}

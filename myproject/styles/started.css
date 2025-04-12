@@ -1,0 +1,287 @@
+.getting-started {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    font-family: "Playwrite IT Moderna", sans-serif;
+    background: #fafafa;
+}
+
+.getting-started h1 {
+    font-family: "Big Shoulders Stencil", sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #e63946;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.step {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    border-bottom: 5px solid #ff7f00;
+}
+
+.step:hover {
+    transform: translateY(-4px);
+}
+
+.step h2 {
+    font-family: "Big Shoulders Stencil", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #222;
+}
+
+.step p,
+.step ul {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.step img {
+    width: auto;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.bonus ul {
+    list-style: 🔥;
+    padding-left: 1.5rem;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #218838;
+}
+
+/* Active Section Styling */
+.cta a.active {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Add smooth scroll effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer CTA Button Style */
+footer {
+    background-color: #fff;
+    /* Light background for the footer */
+    padding: 3rem 0;
+    /* Vertical padding around the footer */
+    text-align: center;
+    /* Center align the button */
+}
+
+/* Call-to-Action Button Container */
+.cta {
+    display: inline-block;
+    margin-top: 2rem;
+    /* Space from footer content */
+}
+
+/* Home Button Styling */
+.cta a {
+    display: inline-block;
+    background-color: #007bff;
+    /* Blue background */
+    color: white;
+    /* White text */
+    padding: 1rem 2rem;
+    /* Padding around the text */
+    font-size: 1.2rem;
+    /* Slightly larger text */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 50px;
+    /* Rounded corners */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.cta a:hover {
+    background-color: #0056b3;
+    /* Darker blue when hovered */
+    transform: translateY(-3px);
+    /* Slight lift effect on hover */
+}
+
+.cta a:focus {
+    outline: none;
+    /* Remove outline on focus */
+}
+
+.cta a:active {
+    transform: translateY(0);
+    /* Reset position when button is pressed */
+}
+
+/* Mobile Devices (small screens) */
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        /* Prevent horizontal overflow */
+    }
+
+    .getting-started {
+        padding: 2rem 1rem;
+        overflow-x: hidden;
+        /* Ensure no horizontal scrolling */
+    }
+
+    .getting-started h1 {
+        font-size: 2rem;
+        word-wrap: break-word;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        word-wrap: break-word;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+
+    .step h2 {
+        font-size: 1.3rem;
+    }
+
+    .step p,
+    .step ul {
+        font-size: 0.95rem;
+    }
+
+    .step img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .bonus ul {
+        padding-left: 1rem;
+    }
+}
+
+/* Tablet Devices (medium screens) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        /* Prevent horizontal overflow */
+    }
+
+    .getting-started {
+        padding: 3rem 1.5rem;
+        overflow-x: hidden;
+        /* Ensure no horizontal scrolling */
+    }
+
+    .getting-started h1 {
+        font-size: 2.2rem;
+        word-wrap: break-word;
+    }
+
+    .step {
+        padding: 1.75rem;
+    }
+
+    .step h2 {
+        font-size: 1.4rem;
+    }
+
+    .step p,
+    .step ul {
+        font-size: 1rem;
+    }
+
+    .step img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .bonus ul {
+        padding-left: 1.25rem;
+    }
+}
+
+/* Desktop Devices (larger screens) */
+@media only screen and (min-width: 769px) {
+    body {
+        overflow-x: hidden;
+        /* Prevent horizontal overflow */
+    }
+
+    .getting-started {
+        max-width: 900px;
+        padding: 3rem 2rem;
+        margin: 0 auto;
+        /* Center align */
+        overflow-x: hidden;
+        /* Ensure no horizontal scrolling */
+    }
+
+    .getting-started h1 {
+        font-size: 2.5rem;
+        word-wrap: break-word;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+    }
+
+    .step {
+        padding: 2rem;
+    }
+
+    .step h2 {
+        font-size: 1.5rem;
+    }
+
+    .step p,
+    .step ul {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .step img {
+        width: auto;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    .bonus ul {
+        padding-left: 1.5rem;
+    }
+}
