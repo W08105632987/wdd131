@@ -133,9 +133,6 @@ margin: 10px 0;
     color: black;
     white-space: nowrap;
     display: inline-block;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     animation: scrollText 25s linear infinite;
 }
 
