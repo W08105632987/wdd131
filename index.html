@@ -1,55 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wisdom's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #6e8efb, #a777e3);
+      --background-color: #f0f2f5;
+      --text-color: #333;
+      --neumorph-light: #ffffff;
+      --neumorph-dark: #d1d9e6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    body {
+      background: var(--background-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.05),
+    -6px -6px 12px rgba(255, 255, 255, 0.6);
+    width: ;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 10px 10px 20px var(--neumorph-dark), -10px -10px 20px var(--neumorph-light);
+      margin-bottom: 2rem;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #222;
+  font-weight: 600;
+    
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  width: 80%;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.1),
+    -4px -4px 10px rgba(255, 255, 255, 0.6);
+}
+
+ .class-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #222;
+  font-weight: 600;
+    
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.class-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.1),
+    -4px -4px 10px rgba(255, 255, 255, 0.6);
+}
+
+
+
+    .typing-text {
+      font-size: 2rem;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid rgba(255, 255, 255, 0.75);
+      width: 100%;
+      max-width: 20ch;
+      margin: 0 auto 2rem;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 20ch; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: rgba(255, 255, 255, 0.75); }
+    }
+
+    .falling-text {
+      display: flex;
+      justify-content: center;
+      gap: 0.1em;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .falling-text span {
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: fall 0.5s forwards;
+    }
+
+    .falling-text span:nth-child(1) { animation-delay: 0.1s; }
+    .falling-text span:nth-child(2) { animation-delay: 0.2s; }
+    .falling-text span:nth-child(3) { animation-delay: 0.3s; }
+    .falling-text span:nth-child(4) { animation-delay: 0.4s; }
+    .falling-text span:nth-child(5) { animation-delay: 0.5s; }
+    .falling-text span:nth-child(6) { animation-delay: 0.6s; }
+    .falling-text span:nth-child(7) { animation-delay: 0.7s; }
+
+    @keyframes fall {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .portfolio-section {
+      background: var(--primary-gradient);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 10px 10px 30px var(--neumorph-dark);
+      margin-bottom: 2rem;
+      width: 100%;
+      max-width: 800px;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-section:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .typing-text {
+        font-size: 1.5rem;
+      }
+      .falling-text {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
-<body>
-  <div class="background-gradient"></div>
+<body>  
+  <div class="container">
 
-  <header class="glass-card header">
-    <h1>Hello, I'm Wisdom 👋</h1>
-    <p>Creative Developer | Designer | Innovator</p>
-  </header>
-
-  <section class="glass-card about" id="about">
-    <h2>About Me</h2>
-    <p>I'm a passionate developer with a love for clean design, smooth user experiences, and powerful web technologies. I build modern websites using the latest CSS, HTML, JavaScript and animations to bring brands and ideas to life. 🚀</p>
-  </section>
-
-  <section class="glass-card projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card neumorphic-button">
-        <h3>Site 1</h3>
-        <a href="https://yoursite1.com" target="_blank">Visit Site</a>
-      </div>
-      <div class="project-card neumorphic-button">
-        <h3>Site 2</h3>
-        <a href="https://yoursite2.com" target="_blank">Visit Site</a>
-      </div>
-      <div class="project-card neumorphic-button">
-        <h3>Site 3</h3>
-        <a href="https://yoursite3.com" target="_blank">Visit Site</a>
-      </div>
+    <div class="profile-pic">
+      <img src="images/IMG_20250416_140809.jpg" alt="My Photo">
     </div>
-  </section>
 
-  <section class="glass-card contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>I'd love to work with you! Reach out via:</p>
-    <div class="contact-links">
-      <a href="mailto:wisdom166chiboy@gmail.com" class="neumorphic-button">Email</a>
-      <a href="" target="_blank" class="neumorphic-button">LinkedIn</a>
-      <a href="https://twitter.com/yourprofile" target="_blank" class="neumorphic-button">Twitter</a>
+    <div class="typing-text">Hi, I'm Wisdom</div>
+
+    <div class="falling-text">
+      <span>W</span><span>e</span><span>b</span><span>&nbsp;</span><span>D</span><span>e</span><span>v</span>
     </div>
-  </section>
 
-  <footer class="glass-card footer">
-    <p>© 2025 Wisdom Chidera. All rights reserved.</p>
-  </footer>
 
+    <div class="portfolio-section">
+      <h2>My Projects</h2>
+      <p>All my project previews, links, and descriptions will be listed here...</p>
+      <a href="https://w08105632987.github.io/wdd131/mytemplates/portifolio-template" class="btn">NeuroStack Template</a>
+      <a href="https://w08105632987.github.io/wdd131/mytemplates/Pulse_appLandingPage" class="btn">Pulse app Landing page/Templte</a>
+      <a href="https://w08105632987.github.io/wdd131/mytemplates/nova-template" class="btn">Nova Template</a>
+      <a href="https://w08105632987.github.io/wdd131/myproject/first.html" class="btn">Affiliate marketing</a>
+      <a href="https://w08105632987.github.io/wdd131/mytemplates/restaurantTemplate" class="btn">Restaurant Template</a>
+    </div>
+
+    <div class="portfolio-section">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto::wisdom166chiboy@gmail.com" class="class-btn">wisdom166chiboy@gmail.com</a></p>
+    </div>
+  </div>
 </body>
 </html>

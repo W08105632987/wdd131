@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neurostack Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: #1e1e2f;
+      --glass-color: rgba(255, 255, 255, 0.05);
+      --text-color: #ffffff;
+      --accent: #e94560;
+      --neumorphism-dark: #2a2a40;
+      --neumorphism-light: #3c3c5c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 30vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background: linear-gradient(to left, #12121a, #1e1e2f);
+      text-align: center;
+      padding: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .glass-box {
+      background: var(--glass-color);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem 3rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h1, h3 {
+      color: var(--accent);
+    }
+
+    h2 {
+        color: var(--text-color);
+        margin-bottom: 1rem;
+        font-size: 34px;
+    }
+
+    .typing-text {
+      font-size: 2rem;
+      white-space: nowrap;
+      border-right: 4px solid var(--accent);
+      width: fit-content;
+      overflow: hidden;
+      animation: typing 3s steps(30, end), blink .75s step-end infinite alternate;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .parallax {
+      background-image: url('images/food2.jpg');
+      opacity: 0.7;
+      min-height: 50vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .neumorphic-card, .glass-section {
+      background: var(--neumorphism-dark);
+      box-shadow: 10px 10px 20px #141428, -10px -10px 20px #34345a;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      max-width: 450px;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      background: #151525;
+      padding: 2rem;
+      text-align: center;
+      color: #bbb;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .typing-text {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="glass-box">
+      <h1 id="typing"></h1>
+    </div>
+  </header>
+
+  <section class="section parallax">
+    <h2>Delightful Experiences Await</h2>
+  </section>
+
+  <section class="section">
+    <h1>Our Specialties</h1>
+    <div class="menu">
+      <div class="neumorphic-card">
+        <h3>Spicy Grilled Chicken</h3>
+        <p>Perfectly seasoned and flame-grilled to perfection.</p>
+      </div>
+      <div class="neumorphic-card">
+        <h3>Gourmet Pizza</h3>
+        <p>Stone-baked, cheesy, and packed with premium toppings.</p>
+      </div>
+      <div class="neumorphic-card">
+        <h3>Classic Cheeseburger</h3>
+        <p>Juicy beef patty with melted cheese and fresh veggies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/food1.jpg" alt="Food 1" />
+      <img src="images/food3.jpg" alt="Food 2" />
+      <img src="images/food4.jpg" alt="Food 3" />
+      <img src="images/food5.jpg" alt="Food 4" />
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Visit Us</h2>
+    <div class="glass-section">
+      <p><strong>Address: </strong> 123 Gourmet Lane, Flavor City, FC 56789</p>
+      <p><strong>Phone: </strong> +123-456-7890</p>
+      <p><strong>Email: </strong> contact@neurostackrestaurant.com</p>
+      <p><strong>Hours: </strong> Mon - Sun: 10am - 11pm</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Neurostack Restaurant. All rights reserved.
+  </footer>
+
+  <script>
+    const phrases = [
+      "Neurostack Restaurant",
+      "Come and experience luxury dining",
+      "Elevate your taste buds",
+      "Where flavor meets comfort"
+    ];
+
+    let i = 0;
+    const typingElement = document.getElementById('typing');
+
+    function typePhrase(phrase, callback) {
+      typingElement.textContent = '';
+      let j = 0;
+      const interval = setInterval(() => {
+        typingElement.textContent += phrase[j];
+        j++;
+        if (j >= phrase.length) {
+          clearInterval(interval);
+          setTimeout(() => deletePhrase(callback), 1500);
+        }
+      }, 100);
+    }
+
+    function deletePhrase(callback) {
+      let content = typingElement.textContent;
+      const interval = setInterval(() => {
+        content = content.slice(0, -1);
+        typingElement.textContent = content;
+        if (!content.length) {
+          clearInterval(interval);
+          callback();
+        }
+      }, 50);
+    }
+
+    function loopTyping() {
+      typePhrase(phrases[i], () => {
+        i = (i + 1) % phrases.length;
+        loopTyping();
+      });
+    }
+
+    loopTyping();
+  </script>
+</body>
+</html>
