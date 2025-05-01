@@ -1,0 +1,349 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    /* Gradient for legendary feel */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+
+/* Main Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    /* Glass effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 100;
+    border-radius: 15px;
+}
+
+.main-header .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar ul li a:hover {
+    background: #fff;
+    color: #333;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    /* Vibrant Gradient */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 5;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* Shiny effect */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* Shiny effect */
+}
+
+.hero .btn-primary {
+    padding: 18px 30px;
+    background: #fff;
+    color: #333;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn-primary:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.hero .btn-primary:active {
+    transform: translateY(2px);
+}
+
+/* Features Section */
+.why-us {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-box h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.feature-box p {
+    font-size: 1.2rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 60px 20px;
+    color: #fff;
+    margin-top: 60px;
+    border-radius: 20px;
+}
+
+.testimonials h2 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+}
+
+.testimonial-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial p {
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    font-weight: 600;
+    text-align: right;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Call to Action Section */
+.cta {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 80px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.cta h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cta .btn-secondary {
+    padding: 20px 40px;
+    background-color: #fff;
+    color: #ff6a00;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta .btn-secondary:hover {
+    background-color: #ff6a00;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.cta .btn-secondary:active {
+    transform: translateY(2px);
+}
+
+/* Footer styles */
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 80px;
+    border-radius: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .navbar.mobile-nav-open ul {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+
+    .testimonial-list {
+        flex-direction: column;
+    }
+}

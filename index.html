@@ -1,59 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD131-Dynamic Web Fundamentals. Okechukwu Wisdom Chidera. This is my page containing information about me and all my products and services. Its my WDD131 Task, so i decided to design a platform in which i can market myself and my abilities. I will work on this continuosly until it's perfect.">
-    <meta name="author" content="Okechukwu Wisdom Chidera">
-    <title>WDD131-Dynamic Web Fundamentals - Okechukwu Wisdom Chidera.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wisdom's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-    <header>
-        <h1>WDD 131: Dynamic Web Fundamentals-<strong>Okechukwu Wisdom Chidera</strong></h1>
-        <nav>
-                <a href="https://www.linkedln.com">Linkedln</a>
-                <a href="https://byupw.instructure.com/">Canvas</a>
-                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
-                <a href="#">Final project</a>
-        </nav>
-    </header>
-    <main>
-        <div class="card-container">
-        <section class="card">
-            <div class="column"><h2>My Profile</h2></div>
-            <img src="images/me.png" alt="Okechukwu Wisdom Chidera">
-            <p>Hi, I'm Okechukwu Wisdom Chidera, a passionate web designer with a keen eye for detail and a drive for creating seamless
-            digital experiences. As a student at Brigham Young University and the University of Nigeria, Nsukka, I blend creativity
-            with technical expertise to craft visually stunning and user-friendly websites. My love for web design goes beyond
-            aesthetics—I focus on functionality, responsiveness, and innovation to bring ideas to life. Let's build something
-            amazing together!</p>
-        </section>
+  <div class="background-gradient"></div>
 
-        <section class="card">
-            <div class="column"><h2>My Portifolio</h2></div>
-            <img src="images/web.jpg" alt="me">
-                <ul class="lists">
-                <li><a href="#">White water warriors rafting site</a></li>
-                <li><a href="#">The great outdoors camping site</a></li>
-                <li><a href="#">Monieking site</a></li>
-                <li><a href="#">Monieking contribution page</a></li>
-                <li><a href="index.html">My personal webpage</a></li>
-                </ul>
-        </section>
-        </div>
-    </main>
-    <footer>
-        <p>😎Okechukwu Wisdom Chidera😎 Nigeria</p>
-        <p></p>
+  <header class="glass-card header">
+    <h1>Hello, I'm Wisdom 👋</h1>
+    <p>Creative Developer | Designer | Innovator</p>
+  </header>
 
-    </footer>
-</div>
+  <section class="glass-card about" id="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate developer with a love for clean design, smooth user experiences, and powerful web technologies. I build modern websites using the latest CSS, HTML, JavaScript and animations to bring brands and ideas to life. 🚀</p>
+  </section>
+
+  <section class="glass-card projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card neumorphic-button">
+        <h3>Site 1</h3>
+        <a href="https://yoursite1.com" target="_blank">Visit Site</a>
+      </div>
+      <div class="project-card neumorphic-button">
+        <h3>Site 2</h3>
+        <a href="https://yoursite2.com" target="_blank">Visit Site</a>
+      </div>
+      <div class="project-card neumorphic-button">
+        <h3>Site 3</h3>
+        <a href="https://yoursite3.com" target="_blank">Visit Site</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="glass-card contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>I'd love to work with you! Reach out via:</p>
+    <div class="contact-links">
+      <a href="mailto:wisdom166chiboy@gmail.com" class="neumorphic-button">Email</a>
+      <a href="" target="_blank" class="neumorphic-button">LinkedIn</a>
+      <a href="https://twitter.com/yourprofile" target="_blank" class="neumorphic-button">Twitter</a>
+    </div>
+  </section>
+
+  <footer class="glass-card footer">
+    <p>© 2025 Wisdom Chidera. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

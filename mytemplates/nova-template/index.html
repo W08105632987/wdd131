@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova | Legendary Template</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1>Nova</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Shine Bright With Nova</h2>
+      <p>The perfect modern template for your product, service, or portfolio. Designed with love and built for success.</p>
+      <button class="btn">Get Started</button>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Blazing Performance</h3>
+        <p>Optimized for speed and performance, ensuring your site loads lightning-fast across all devices.</p>
+      </div>
+      <div class="card">
+        <h3>Modern Design</h3>
+        <p>Built with glassmorphism, clean typography, and smooth UX patterns to impress your audience.</p>
+      </div>
+      <div class="card">
+        <h3>Fully Responsive</h3>
+        <p>Looks stunning on every device—from phones to desktops—with flexible grids and fluid layout.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Nova. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>

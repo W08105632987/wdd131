@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.getElementById("menu");
   const templeCards = document.getElementById("temple-cards");
 
+
   if (menuToggle && menu) {
     menuToggle.addEventListener("click", function () {
       menu.classList.toggle("active");
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ? "&times;"
         : "&#9776;";
     });
-  }
+  }P
 
   // Temple Data (Using Local Images)
   const temples = [
